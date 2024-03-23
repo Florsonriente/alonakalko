@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz about me</title>
+
+ 
+   
+    <link rel="stylesheet" href="css/stylenewwebsite_quiz.css">
+    <link rel="stylesheet" href="css/style_general.css">
+
+</head>
+<header > 
+    <div class = "header">
+        <div class="mobile-toggle">
+            <span class="icon">☰</span>
+          </div>
+<nav>
+    <ul>
+        <div class="left" style="    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100vh;
+        gap: 3em;">
+<li  > <a href="../webproject/newwebsite.html"> Start </a> </li>
+<li> <a href="../webproject/portfolio.html"> Portfolio </a> </li>
+<li > <a href="../webproject/about.html"> Me & IT  </a> </li>
+<li > <a href="../webproject/newwebsite_quiz.html"> Code for fun  </a> </li>
+<li > <a href="mailto:alonakalko89@gmail.com">Contact</a> </li>
+        </div>
+        <div style="display:none;"class ="right">
+<img src="../webproject/pics/oldmanlaufeyson_clouds_of_data_fine_art_photography_fashion_mag_d06afed8-0d04-4b12-af34-40ca5b291693.png" alt="" style="width:300px"style="display:none!important">
+<img src="../webproject/pics/amyura_abstract_holographic_of_gradient_yellow_pastel_color_8d53e07c-f4c3-4b27-b710-3eb7bc74b443.png" alt="" style="width:300px">
+<img src="../webproject/pics/bluebutton_yi_soft_holographic_gradient_illustration_minimalist.png" alt="" style="width:300px">
+<img src="../webproject/pics/beyondtomorrowstudios_76190_A_black_rectangular_box_above_a_doo_ef9757af-2723-4be1-932d-9e5eccf38c06.png" alt="" style="width:300px">
+<img src="../webproject/pics/georgieoboy_Realistic_3d_holographic_liquid_texture_-_iridescen_f14bfd2d-e796-4e50-abf1-6e8b414accf3.png" alt="" style="width:300px">
+        </div>
+        </ul>
+
+</nav>
+</div>
+</header>
+
+<body>
+    <main>
+
+        <div class='cursor' id="cursor"></div>
+        <div class="start">  <h1>Time for a quiz with some facts about me:)</h1></div>
+<!-- QUIZ APPLICATION START ----------------------------------------------------------------------------------------->
+<div class="container">
+<div class="app"> 
+   <!-- <h1> What about playing a quizz <br>to get to know me better?</h1>-->
+    <div class="quiz">
+        <h2 id="question">Question goes here</h2>       
+        <div id="answer-buttons">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+        </div>
+        <div id="next-btn">Next </div>
+    </div>
+    <div id="comments">
+        <!-- Your content here -->
+        <button id="closeButton">Close</button>
+    </div>
+    
+   <!-- <script>
+        const commentsDiv = document.getElementById('comments');
+        const closeButton = document.getElementById('closeButton');
+    
+        // Event listener for the close button
+        closeButton.addEventListener('click', () => {
+            commentsDiv.style.display = 'none'; // Hide the comments div
+        });
+    </script>-->
+    <div class="quizpic">
+        <img src="../webproject/images_quiz/y2021-06-02-14_generated-Photoroom.png-Photoroom.png" alt="">
+    </div>
+    </div>
+
+   
+
+</div>
+<!-- QUIZ APPLICATION FINISH ----------------------------------------------------------------------------------------->
+
+<div class="buttons">
+
+
+    <button> <a href="../webproject/newwebsite.html"> Start  </a></button>
+    <button> <a href="../webproject/newwebsite_weather_app.html"> Next </a></button>
+    
+    
+     </div>  
+
+</main>
+  
+
+<script src="../webproject/js/newwebsite_quiz.script.js"></script>
+
+
+
+
+<!--OPEN CLOSE NAVIGATION -->
+     
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!----><script>
+        
+        $(document).ready(function() {
+    $('.mobile-toggle').click(function() {
+        var isOpen = $(this).hasClass('open');
+
+        if (isOpen) {
+            $(this).removeClass('open');
+          $(this).find('span').text('☰'); //Change text to hamburger icon
+            $('header li, .portfolioheader li').css('transform', 'rotate(-90deg)');
+            $('ul').css('width', ''); // Remove width property
+            $('.right').css('display', 'none');
+            $('ul').css('flex-direction', 'column');
+            $('header a').css('font-size', '1em');
+            $('header a').css('font-weight', '300');
+            $('header a').css('text-transform', 'none');
+            $('nav').css('background-color', 'transparent')
+            if ($(window).width() < 800) {
+        // If screen width is less than 700px, set header link color to green
+        $('header a').css('color', 'transparent');
+    } else {
+        // Otherwise, set header link color to white
+        $('header a').css('color', 'white');
+    }
+            
+            
+        } else {
+            $(this).addClass('open');
+            $(this).find('span').text('✕'); //Change text to close icon
+            $('header li, .portfolioheader li').css('transform', 'rotate(0deg)');
+            $('ul').css('width', '100vw');
+            $('.right').css('display', 'block');
+            $('.left').css('display', 'flex');
+            $('.left').css('width', '70%');
+            $('ul').css('flex-direction', 'row');
+            $('header a').css('font-size', '4em');
+            $('header a').css('font-weight', '900');
+            $('header a').css('text-transform', 'lowercase');
+            $('nav').css('background-color', 'black')
+            $('header a').css('color', 'white');
+
+
+        
+        }
+    });
+});
+    </script>
+
+
+<!--IMAGES EFFECT ON HOVER IN NAVIGATION -->
+
+<script>
+document.querySelectorAll('.left > li').forEach(function(li, index) {
+    li.addEventListener('mouseover', function() {
+      document.querySelectorAll('.right > img').forEach(function(img, imgIndex) {
+        if (imgIndex === index) {
+          img.style.transform = 'scale(1.5)';
+          img.style.opacity = '1';
+        } else {
+          img.style.opacity = '0';
+        }
+      });
+    });
+  
+    li.addEventListener('mouseout', function() {
+      document.querySelectorAll('.right > img').forEach(function(img) {
+        img.style.transform = 'scale(1)';
+        img.style.opacity = '0';
+      });
+    });
+  });
+</script>  
+
+
+<!--
+    COOL CURSOR
+-->
+<script>
+var cursor = document.getElementById("cursor");
+document.body.addEventListener("mousemove", function(e) {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+});
+
+document.body.addEventListener("mouseover", function(e) {
+    cursor.style.border = '3px solid red'; // Change border to red
+});
+
+
+</script>
+    </body>
+    </html>

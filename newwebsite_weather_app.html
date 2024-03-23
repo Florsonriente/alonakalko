@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather, travel & mood</title>
+
+   
+    <link rel="stylesheet" href="css/stylenewwebsite_weather_app.css">
+    <link rel="stylesheet" href="css/style_general.css">
+
+    
+
+</head>
+
+<header > 
+    <div class = "header">
+        <div class="mobile-toggle">
+            <span class="icon">☰</span>
+          </div>
+<nav>
+    <ul>
+        <div class="left" style="    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100vh;
+        gap: 3em;">
+<li  > <a href="../webproject/newwebsite.html"> Start </a> </li>
+<li> <a href="../webproject/portfolio.html"> Portfolio </a> </li>
+<li > <a href="../webproject/about.html"> Me & IT  </a> </li>
+<li > <a href="../webproject/newwebsite_quiz.html"> Code for fun  </a> </li>
+<li > <a href="mailto:alonakalko89@gmail.com">Contact</a> </li>
+        </div>
+        <div style="display:none;"class ="right">
+<img src="../webproject/pics/oldmanlaufeyson_clouds_of_data_fine_art_photography_fashion_mag_d06afed8-0d04-4b12-af34-40ca5b291693.png" alt="" style="width:300px"style="display:none!important">
+<img src="../webproject/pics/amyura_abstract_holographic_of_gradient_yellow_pastel_color_8d53e07c-f4c3-4b27-b710-3eb7bc74b443.png" alt="" style="width:300px">
+<img src="../webproject/pics/bluebutton_yi_soft_holographic_gradient_illustration_minimalist.png" alt="" style="width:300px">
+<img src="../webproject/pics/beyondtomorrowstudios_76190_A_black_rectangular_box_above_a_doo_ef9757af-2723-4be1-932d-9e5eccf38c06.png" alt="" style="width:300px">
+<img src="../webproject/pics/georgieoboy_Realistic_3d_holographic_liquid_texture_-_iridescen_f14bfd2d-e796-4e50-abf1-6e8b414accf3.png" alt="" style="width:300px">
+        </div>
+        </ul>
+
+</nav>
+</div>
+</header>
+
+
+<body>
+    <div class='cursor' id="cursor"></div>
+    <main>
+      <div class="start">  <h1>Let's check up the weather before we travel!</h1></div>
+        <div class="maincontainer">
+   
+
+  <!-- WEATHER APPLICATION START ----------------------------------------------------------------------------------------->
+ <div class="title"> <h1>Check the weather in any town of the world <br>and get to know me better</h1></div>
+<div class="weatherappwithman">
+  <div class="card">
+    <div class="search">
+        <input type="text" placeholder="enter city name" spellcheck="false">
+        <button><img src="../webproject/images_weather_app/search.png"></button>
+    </div>
+    <div class="weather">
+        <img src="../webproject/images_weather_app/rain.png" class="weather-icon">
+   <h1 class="temp">22°c</h1>
+   <h2 class="city">New York</h2>
+   <div class="details">
+    <div class="col">
+        <img src="../webproject/images_weather_app/humidity.png">
+        <div>
+            <p class="humidity">50%</p>
+            <p>Humidity</p>
+        </div></div>
+        <div class="col">
+            <img src="../webproject/images_weather_app/wind.png">
+            <div>
+                <p class="wind">15km/h</p>
+                <p>Wind speed</p>
+            </div>
+    </div>
+</div>
+   </div>
+  </div>
+ <!-- <div class="walkingman">
+   <div class="willwearclothes">
+  
+  </div>   
+</div>-->
+</div>
+</div> <!--container end-->
+
+<div class="buttons">
+
+
+    <button> <a href="../webproject/newwebsite_quiz.html"> Back  </a></button>
+    <button> <a href="../webproject/newwebsite_drag&drop.html"> Next  </a></button>
+    
+    
+     </div>    
+</main>
+<script src="../webproject/js/newwebsite_weather.script.js"></script>
+<script>
+
+const apiKey = "5c2764e96adc355cc3169b7a5a7eacdf";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+
+const searchBox = document.querySelector(".search input");
+const searchBtn = document.querySelector(".search button");
+const weatherIcon = document.querySelector(".weather-icon");
+
+
+async function checkWeather(city){
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+    const data = await response.json();
+    console.log(data);
+
+    document.querySelector(".city").innerHTML = data.name;
+    document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
+    document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+    document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
+    // Retrieve the temperature value from the ".temp" element
+const tempinfo = document.querySelector(".temp").innerHTML;
+const temp = Math.round(data.main.temp); // Assigning temperature value to temp variable
+    
+
+  /*// Update the title string based on weather conditions
+  if (data.weather[0].main == "Clouds"|| data.weather[0].main == "Mist" ) {
+        document.querySelector(".title h1").innerText = `Oh how cool is that! That you are travelling to ${searchBox.value}! The weather will be cloudy or misty and the temperature will be ${tempinfo}. By this weather I would enjoy a cup of capuccino in some caffe at the corner and will read a cozy book`;
+    } else if (data.weather[0].main == "Rain"|| data.weather[0].main == "Drizzle" ) {
+
+        if (temp >= 20) {
+            document.querySelector(".title h1").innerText = ` DANCE ON THE RAIN !!!! Oh how cool is that! That you are travelling to ${searchBox.value}! The weather will be rainy or dizzly and the temperature will be ${tempinfo}`;
+    
+            } else if (temp >= 10 && temp <= 20) {  document.querySelector(".title h1").innerText = ` DO HAVE A WALK !!!! Oh how cool is that! That you are travelling to ${searchBox.value}! The weather will be rainy or dizzly and the temperature will be ${tempinfo}`;
+   
+            } else if (temp <= 10) {  document.querySelector(".title h1").innerText = `STAY HOME !!!! Oh how cool is that! That you are travelling to ${searchBox.value}! The weather will be rainy or dizzly and the temperature will be ${tempinfo}`;
+        } } 
+    
+    else if (data.weather[0].main == "Clear" ) {
+       
+        {
+
+if (temp >= 20) {
+    document.querySelector(".title h1").innerText = `  LET'S HAVE A WALK IN THE PARK TO FIND A BIT MORE SHADOW!!!! Oh how cool is that! That you are travelling to ${searchBox.value}! The weather will be rainy or dizzly and the temperature will be ${tempinfo}`;
+
+    } else if (temp >= 10 && temp <= 20) {  document.querySelector(".title h1").innerText = ` LET'S LOOK FOR A NICE OPEN AIR BAR TO ENJOY THE VIEW1!!!Oh how cool is that! That you are travelling to ${searchBox.value}! The weather will be rainy or dizzly and the temperature will be ${tempinfo}`;
+
+    } else if (temp <= 10) {  document.querySelector(".title h1").innerText = `OH WHEREVEWET U GO SEEMS LIKE U NEED A JACKET !!!! Oh how cool is that! That you are travelling to ${searchBox.value}! The weather will be rainy or dizzly and the temperature will be ${tempinfo}`;
+} } 
+
+
+    } else {
+        document.querySelector(".title h1").innerText = `Oh how cool is that! That you are travelling to ${searchBox.value}! Let its now, let it snow, let it snow!`;
+    }
+
+
+   
+
+if (temp >= 30) {
+    document.querySelector(".card").style.background = "red";
+} else if (temp >= 18) {
+    document.querySelector(".card").style.background  = "orange";
+} else if (temp >= 7) {
+    document.querySelector(".card").style.background  = "yellow";
+} else if (temp >= 0) {
+    document.querySelector(".card").style.background  = "violet";
+}
+else {
+    document.querySelector(".card").style.background  = "blue";
+}*/
+  
+
+
+    
+
+    if(data.weather[0].main == "Clouds"|| data.weather[0].main == "Mist") {
+        weatherIcon.src = "../webproject/images_weather_app/clouds.png"
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundSize = "cover";
+        document.querySelector("main").style.backgroundImage ='url("../webproject/images_weather_app/clouds3.gif")';
+        //document.querySelector("body > main").style.backgroundImage ='url("../webproject/images_weather_app/clouds3.gif")';
+
+                    if (temp >= 15) {
+                    document.body.style.backgroundImage = 'url("../webproject/images_weather_app/bckgr_sun.png")' } 
+                    else if (temp >= 4 && temp <= 14){
+                        document.body.style.backgroundImage = 'url("../webproject/images_weather_app/backgr_clouds.png")' } 
+                    else  {
+                        document.body.style.backgroundImage = 'url("../webproject/images_weather_app/bckr_snow.png")' }   
+                    }
+                    
+    
+    else if (data.weather[0].main == "Clear") {
+        weatherIcon.src = "../webproject/images_weather_app/clear.png"
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundSize = "cover";
+        document.querySelector("main").style.backgroundImage ='url("../webproject/images_weather_app/sun.gif")';
+
+                    if (temp >= 15) {
+                    document.body.style.backgroundImage = 'url("../webproject/images_weather_app/bckgr_sun.png")' } 
+                    else if (temp >= 4 && temp <= 14){
+                        document.body.style.backgroundImage = 'url("../webproject/images_weather_app/bckgr_sun.png")' } 
+                    else  {
+                        document.body.style.backgroundImage = 'url("../webproject/images_weather_app/bckr_snow.png")' }   
+                    }
+
+
+    else if (data.weather[0].main == "Rain" || data.weather[0].main == "Drizzle"){
+        weatherIcon.src = "../webproject/images_weather_app/rain.png"
+       
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundSize = "cover";
+        document.querySelector("main").style.backgroundImage ='url("../webproject/images_weather_app/rain3.gif")';
+
+                    if (temp >= 15) {
+                    document.body.style.backgroundImage = 'url("../webproject/images_weather_app/bckgr_sun.png")' } 
+                    else if (temp >= 4 && temp <= 14){
+                        document.body.style.backgroundImage = 'url("../webproject/images_weather_app/bckgr_rain.png")' }
+                    else  {
+                        document.body.style.backgroundImage = 'url("../webproject/images_weather_app/bckr_snow.png")' }   
+                    }
+
+   /* else if (data.weather[0].main == "Drizzle"){
+        weatherIcon.src = "../webproject/images_weather_app/drizzle.png"
+        document.body.style.backgroundImage = 'url("../webproject/images_weather_app/bckgr_rain.png")' 
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundSize = "cover";
+        document.querySelector(".maincontainer").style.backgroundImage ='url("../webproject/images_weather_app/rain3.gif")';
+    }
+    else if (data.weather[0].main == "Mist"){
+        weatherIcon.src = "../webproject/images_weather_app/mist.png"
+        document.body.style.backgroundImage = 'url("../webproject/images_weather_app/backgr_clouds.png")' 
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundSize = "cover";
+        document.querySelector(".maincontainer").style.backgroundImage ='url("../webproject/images_weather_app/clouds3.gif")';
+    }*/
+    else if (data.weather[0].main == "Snow"){
+        weatherIcon.src = "../webproject/images_weather_app/snow.png"
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundSize = "cover";
+        document.querySelector("main").style.backgroundImage ='url("../webproject/images_weather_app/snow_bckgr.gif")';
+
+                    if (temp >= 15) {
+                    document.body.style.backgroundImage = 'url("../webproject/images_weather_app/bckgr_sun.png")' } 
+                    else if (temp >= 4 && temp <= 14){
+                        document.body.style.backgroundImage = 'url("../webproject/images_weather_app/backgr_clouds.png")' } 
+                    else  {
+                        document.body.style.backgroundImage = 'url("../webproject/images_weather_app/bckr_snow.png")' }  
+
+
+    }
+}
+
+
+
+searchBtn.addEventListener("click", () => {
+    checkWeather(searchBox.value);
+    
+})
+
+
+
+</script>
+
+
+<!--OPEN CLOSE NAVIGATION -->
+     
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!----><script>
+        
+        $(document).ready(function() {
+    $('.mobile-toggle').click(function() {
+        var isOpen = $(this).hasClass('open');
+
+        if (isOpen) {
+            $(this).removeClass('open');
+          $(this).find('span').text('☰'); //Change text to hamburger icon
+            $('header li, .portfolioheader li').css('transform', 'rotate(-90deg)');
+            $('ul').css('width', ''); // Remove width property
+            $('.right').css('display', 'none');
+            $('ul').css('flex-direction', 'column');
+            $('header a').css('font-size', '1em');
+            $('header a').css('font-weight', '300');
+            $('header a').css('text-transform', 'none');
+            $('nav').css('background-color', 'transparent');
+            if ($(window).width() < 800) {
+        // If screen width is less than 700px, set header link color to green
+        $('header a').css('color', 'transparent');
+    } else {
+        // Otherwise, set header link color to white
+        $('header a').css('color', 'white');
+    }
+        } else {
+            $(this).addClass('open');
+            $(this).find('span').text('✕'); //Change text to close icon
+            $('header li, .portfolioheader li').css('transform', 'rotate(0deg)');
+            $('ul').css('width', '100vw');
+            $('.right').css('display', 'block');
+            $('.left').css('display', 'flex');
+            $('.left').css('width', '70%');
+            $('ul').css('flex-direction', 'row');
+            $('header a').css('font-size', '4em');
+            $('header a').css('font-weight', '900');
+            $('header a').css('text-transform', 'lowercase');
+            $('nav').css('background-color', 'black');
+            $('header a').css('color', 'white');
+
+
+
+        
+        }
+    });
+});
+    </script>
+
+
+<!--IMAGES EFFECT ON HOVER IN NAVIGATION -->
+
+<script>
+document.querySelectorAll('.left > li').forEach(function(li, index) {
+    li.addEventListener('mouseover', function() {
+      document.querySelectorAll('.right > img').forEach(function(img, imgIndex) {
+        if (imgIndex === index) {
+          img.style.transform = 'scale(1.5)';
+          img.style.opacity = '1';
+        } else {
+          img.style.opacity = '0';
+        }
+      });
+    });
+  
+    li.addEventListener('mouseout', function() {
+      document.querySelectorAll('.right > img').forEach(function(img) {
+        img.style.transform = 'scale(1)';
+        img.style.opacity = '0';
+      });
+    });
+  });
+</script>  
+
+
+<!--
+    COOL CURSOR
+-->
+<script>
+var cursor = document.getElementById("cursor");
+document.body.addEventListener("mousemove", function(e) {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+});
+
+document.body.addEventListener("mouseover", function(e) {
+    cursor.style.border = '3px solid red'; // Change border to red
+});
+
+
+</script>
+    </body>
+    </html>

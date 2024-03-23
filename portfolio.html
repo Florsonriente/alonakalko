@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio of Alona Kalko</title>
+
+ 
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/style_general.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+
+
+   
+    
+
+</head>
+<body>
+    <header > 
+        <div class = "header">
+            <div class="mobile-toggle">
+                <span class="icon">☰</span>
+              </div>
+    <nav>
+        <ul>
+            <div class="left" style="    display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 100vh;
+            gap: 3em;">
+    <li  > <a href="../webproject/newwebsite.html"> Start </a> </li>
+    <li> <a href="../webproject/portfolio.html"> Portfolio </a> </li>
+    <li > <a href="../webproject/about.html"> Me & IT  </a> </li>
+    <li > <a href="../webproject/newwebsite_quiz.html"> Code for fun  </a> </li>
+    <li > <a href="mailto:alonakalko89@gmail.com">Contact</a> </li>
+            </div>
+            <div style="display:none;"class ="right">
+    <img src="../webproject/pics/oldmanlaufeyson_clouds_of_data_fine_art_photography_fashion_mag_d06afed8-0d04-4b12-af34-40ca5b291693.png" alt="" style="width:300px"style="display:none!important">
+    <img src="../webproject/pics/amyura_abstract_holographic_of_gradient_yellow_pastel_color_8d53e07c-f4c3-4b27-b710-3eb7bc74b443.png" alt="" style="width:300px">
+    <img src="../webproject/pics/bluebutton_yi_soft_holographic_gradient_illustration_minimalist.png" alt="" style="width:300px">
+    <img src="../webproject/pics/beyondtomorrowstudios_76190_A_black_rectangular_box_above_a_doo_ef9757af-2723-4be1-932d-9e5eccf38c06.png" alt="" style="width:300px">
+    <img src="../webproject/pics/georgieoboy_Realistic_3d_holographic_liquid_texture_-_iridescen_f14bfd2d-e796-4e50-abf1-6e8b414accf3.png" alt="" style="width:300px">
+            </div>
+            </ul>
+    
+    </nav>
+    </div>
+    </header>
+
+    
+    <div class='cursor' id="cursor"></div>
+
+<div class="swiper">
+
+    <div class="start">  <h1></h1></div>
+    <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+            
+            <h1> <span class = "projectname">FLAYR</span>With the actual web project for Flayr we wanted to focus at our AI skills nad at the same time to keep focus on our severe background in creative content production. The website was build up with Elementor. The styling and design was developed and created locally and implemented with CSS & Java Script code snippets. Such elements as Grids, Layouting of Text and Images Blocks, Typo Animations, Header were refactored locally with CSS & Javascript. With this web project we made focus on playfull & creative style of the Flayr agency. That's why there are a lot of scribbles and brave styling elements like Contact form and cut edges of the Images in Grids. The website was build with Avada with a very detailed use of CSS for general styling and responsive design.Here is a showcase of the Grids I've developed for Flayr. The ideas was to make the inaccurate buttons in a handwriting style that were packed in a filter-bar. At the same time we had a chaotic display of project images. The Grid was implemented with Plugin "The Grid" with a lot of CSS stylng for filter-bar, buttons animations and scribbles positioning & integration.</h1>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="../webproject/portfolio/flayr_1.png" alt="">
+        </div>
+
+        <div class="swiper-slide">
+            <img src="../webproject/portfolio/flayr_2.png" alt="">
+        </div>
+
+        <div class="swiper-slide">
+            <img src="../webproject/portfolio/flayr_1.png" alt="">
+        </div>
+
+        <div class="swiper-slide">
+            <h1><span class = "projectname">AIR SENSE</span>This is the project we have done for Air Sense. The task was to present a lot of analytical and technical information in redable nice way. The project was built with Avada with styling with CSS & responsive design.</h1>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="../webproject/portfolio/air_sense.png" alt="">
+        </div>
+
+        <div class="swiper-slide">
+            <h1><span class = "projectname">PERSONAL WEBSITE</span>Three years ago I built a personal web site with HTML, CSS and Jquery. It's not live anymore because I grow and now I can do more. Nevertheless I find it beautiful. This project had a lot of HTML elements widely sued in web - carousels, slider, images & videos, progress bars, info containers etc.</h1>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="../webproject/portfolio/alona_kalko.png" alt="">
+        </div>
+
+        <div class="swiper-slide">
+            <h1><span class = "projectname">ADVENT CALENDER</span>I was bored and wanted some magic. So i made a digital Asvent Calender. The ideas is that the layout of the main image changes responsively. I used for that HTML and CSS. The Java Script only for Lightbox for opening doors. I find it amazing how much stuff you can do with CSS!</h1>
+        </div>
+
+        <div class="swiper-slide">
+            <img src="../webproject/portfolio/advent.png" alt="">
+        </div>
+
+
+
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="buttons">
+
+
+        <button> <a href="../webproject/newwebsite.html"> Back to Start  </a></button>
+        <button> <a href="../webproject/newwebsite_quiz.html"> Code for fun  </a></button>
+        
+        
+         </div>     
+        
+</div>
+
+</body>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!--
+
+<script>
+const swiper = new Swiper('.swiper', {
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    direction: "vertical",
+    slidesPerView: 1,
+   // spaceBetween: 30,
+    mousewheel: {
+        forceToAxis: true, // Only scroll when direction matches
+    },
+    autoplay: false, // Disable autoplay
+});
+
+
+</script>-->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const swiper = new Swiper('.swiper', {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            direction: "vertical",
+            slidesPerView: 1,
+            mousewheel: {
+                forceToAxis: true, // Only scroll when direction matches
+            },
+            autoplay: false, // Disable autoplay
+            on: {
+                slideChange: function () {
+                    const activeIndex = this.activeIndex;
+                    let newText = "Default Text"; // Set default text
+                    // Update text based on activeIndex
+                    switch (activeIndex) {
+                        case 0:
+                            newText = "FLAYR";
+                            break;
+                        case 1:
+                            newText = "FLAYR";
+                            break;
+                        case 2:
+                            newText = "FLAYR";
+                            break;
+                        case 3:
+                            newText = "FLAYR ";
+                            break;
+                        case 4:
+                            newText = " ";
+                            break;
+
+
+                            case 5:
+                            newText = "AIR SENSE";
+                            break;
+                        case 6:
+                            newText = "";
+                            break;
+                        case 7:
+                            newText = "PERSONAL WEBPAGE";
+                            break;
+                        case 8:
+                            newText = "";
+                            break;
+                        case 9:
+                            newText = "ADVENT CALENDER";
+                            break;
+
+                            
+                        default:
+                            newText = "Default Text";
+                    }
+                    document.querySelector('.start h1').textContent = newText;
+                },
+            },
+        });
+    });
+    </script>
+    
+
+<!--OPEN CLOSE NAVIGATION -->
+     
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!---->
+<script>
+        
+        $(document).ready(function() {
+    $('.mobile-toggle').click(function() {
+        var isOpen = $(this).hasClass('open');
+
+        if (isOpen) {
+            $(this).removeClass('open');
+          $(this).find('span').text('☰'); //Change text to hamburger icon
+            $('header li, .portfolioheader li').css('transform', 'rotate(-90deg)');
+            $('ul').css('width', ''); // Remove width property
+            $('.right').css('display', 'none');
+            $('ul').css('flex-direction', 'column');
+            $('header a').css('font-size', '1em');
+            $('header a').css('font-weight', '300');
+            $('header a').css('text-transform', 'none');
+            $('nav').css('background-color', 'transparent');
+            if ($(window).width() < 800) {
+        // If screen width is less than 700px, set header link color to green
+        $('header a').css('color', 'transparent');
+    } else {
+        // Otherwise, set header link color to white
+        $('header a').css('color', 'white');
+    }
+            
+        } else {
+            $(this).addClass('open');
+            $(this).find('span').text('✕'); //Change text to close icon
+            $('header li, .portfolioheader li').css('transform', 'rotate(0deg)');
+            $('ul').css('width', '100vw');
+            $('.right').css('display', 'block');
+            $('.left').css('display', 'flex');
+            $('.left').css('width', '70%');
+            $('ul').css('flex-direction', 'row');
+            $('header a').css('font-size', '4em');
+            $('header a').css('font-weight', '900');
+            $('header a').css('text-transform', 'lowercase');
+            $('nav').css('background-color', 'black');
+            $('header a').css('color', 'white');
+
+
+
+        
+        }
+    });
+});
+    </script>
+
+
+<!--IMAGES EFFECT ON HOVER IN NAVIGATION -->
+
+<script>
+document.querySelectorAll('.left > li').forEach(function(li, index) {
+    li.addEventListener('mouseover', function() {
+      document.querySelectorAll('.right > img').forEach(function(img, imgIndex) {
+        if (imgIndex === index) {
+          img.style.transform = 'scale(1.5)';
+          img.style.opacity = '1';
+        } else {
+          img.style.opacity = '0';
+        }
+      });
+    });
+  
+    li.addEventListener('mouseout', function() {
+      document.querySelectorAll('.right > img').forEach(function(img) {
+        img.style.transform = 'scale(1)';
+        img.style.opacity = '0';
+      });
+    });
+  });
+</script>  
+
+
+
+<!--
+    COOL CURSOR-->
+
+<script>
+    var cursor = document.getElementById("cursor");
+    document.body.addEventListener("mousemove", function(e) {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+    });
+    
+    document.body.addEventListener("mouseover", function(e) {
+        cursor.style.border = '3px solid red'; // Change border to red
+    });
+    
+    
+    </script>
+
+
+    </html>

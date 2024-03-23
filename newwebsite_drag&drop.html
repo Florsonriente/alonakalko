@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language game & my life credo</title>
+
+
+ 
+  
+    <link rel="stylesheet" href="css/stylenewwebsite_drag_and_drop.css">
+    <link rel="stylesheet" href="css/style_general.css">
+    
+
+</head>
+<header > 
+  <div class = "header">
+      <div class="mobile-toggle">
+          <span class="icon">☰</span>
+        </div>
+<nav>
+  <ul>
+      <div class="left" style="    display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 100vh;
+      gap: 3em;">
+<li  > <a href="../webproject/newwebsite.html"> Start </a> </li>
+<li> <a href="../webproject/portfolio.html"> Portfolio </a> </li>
+<li > <a href="../webproject/about.html"> Me & IT  </a> </li>
+<li > <a href="../webproject/newwebsite_quiz.html"> Code for fun  </a> </li>
+<li > <a href="mailto:alonakalko89@gmail.com">Contact</a> </li>
+      </div>
+      <div style="display:none;"class ="right">
+<img src="../webproject/pics/oldmanlaufeyson_clouds_of_data_fine_art_photography_fashion_mag_d06afed8-0d04-4b12-af34-40ca5b291693.png" alt="" style="width:300px"style="display:none!important">
+<img src="../webproject/pics/amyura_abstract_holographic_of_gradient_yellow_pastel_color_8d53e07c-f4c3-4b27-b710-3eb7bc74b443.png" alt="" style="width:300px">
+<img src="../webproject/pics/bluebutton_yi_soft_holographic_gradient_illustration_minimalist.png" alt="" style="width:300px">
+<img src="../webproject/pics/beyondtomorrowstudios_76190_A_black_rectangular_box_above_a_doo_ef9757af-2723-4be1-932d-9e5eccf38c06.png" alt="" style="width:300px">
+<img src="../webproject/pics/georgieoboy_Realistic_3d_holographic_liquid_texture_-_iridescen_f14bfd2d-e796-4e50-abf1-6e8b414accf3.png" alt="" style="width:300px">
+      </div>
+      </ul>
+
+</nav>
+</div>
+</header>
+
+
+<!--<div class='cursor' id="cursor"></div>-->
+<div class="start">  <h1>Let's play a language game!</h1></div>
+
+ 
+<div class="maincontainer">
+  <div class="title"><h1> Pick up the right word and place it to a right language column. <br> <br> When the words are correctly placed, u will get the translation of the secret phrase in English.<br> <br> The sentence to be appeared at the end is my life credo.  <br> <br> So now you know me a little bit better!
+ </h1>
+ <div class="block">
+    <h2>Pick up the word & drag to a language box</h2>
+    <div id="left">
+    <div class="listspanish" id="vive" draggable="true"><img src="../webproject/images_drag_and_drop/drag_drop_icon.png" draggable="false">Vive   </div>
+    <div class="listitalian" id="vivi" draggable="true"><img src="../webproject/images_drag_and_drop/drag_drop_icon.png" draggable="false">Vivi</div>
+    <div class="listspanish" id="consp"draggable="true"><img src="../webproject/images_drag_and_drop/drag_drop_icon.png" draggable="false">con(sp)</div>
+    <div class="listspanish" id="pasion" draggable="true"><img src="../webproject/images_drag_and_drop/drag_drop_icon.png" draggable="false">pasión</div>
+    <div class="listspanish" id="cadadia" draggable="true"><img src="../webproject/images_drag_and_drop/drag_drop_icon.png" draggable="false">cada día</div>
+    <div class="listitalian" id="conit"draggable="true"><img src="../webproject/images_drag_and_drop/drag_drop_icon.png" draggable="false">con(it)</div>
+    <div class="listitalian" id="passione" draggable="true"><img src="../webproject/images_drag_and_drop/drag_drop_icon.png" draggable="false">passione</div>
+    <div class="listitalian" id="ognigiorno" draggable="true"><img src="../webproject/images_drag_and_drop/drag_drop_icon.png" draggable="false">ogni giorno</div>
+
+    <div class="listhidden" draggable="true"><img src="../webproject/images_drag_and_drop/drag_drop_icon.png" draggable="false">Live </div>
+    <div class="listhidden" draggable="true"><img src="../webproject/images_drag_and_drop/drag_drop_icon.png" draggable="false">every day</div>
+    <div class="listhidden" draggable="true"><img src="../webproject/images_drag_and_drop/drag_drop_icon.png" draggable="false">with</div>
+    <div class="listhidden" draggable="true"><img src="../webproject/images_drag_and_drop/drag_drop_icon.png" draggable="false">passion</div>
+    </div>
+  </div>
+</div>
+<div class="container">
+
+    
+
+   
+
+
+    <div class="block">
+      <h2>Spanish</h2>
+      <div id="spanish"></div>
+  
+    </div>
+    
+    <div class="block">  
+         <h2>Italian</h2>
+        <div id="italian"></div>
+         
+        </div>
+            </div>
+
+          
+          </div>
+     <div class="buttons">
+
+
+              <button> <a href="../webproject/newwebsite_weather_app.html"> Back  </a></button>
+              <button> <a href="../webproject/newwebsite_quiz.html"> Next  </a></button>
+              
+              
+               </div>    
+
+
+    
+<script>
+    let listsspanish = document.getElementsByClassName("listspanish");
+    let listsitalian = document.getElementsByClassName("listitalian");
+    let leftBox = document.getElementById("left");
+    let spanishBox = document.getElementById("spanish");
+    let italianBox = document.getElementById("italian");
+  
+
+   // Set a flag to track whether the alert has been shown
+    
+
+function checkCompletion() {
+  let spanishItemsDropped = Array.from(spanishBox.children).filter(item => item.classList.contains('listspanish')).length;
+  let italianItemsDropped = Array.from(italianBox.children).filter(item => item.classList.contains('listitalian')).length;
+
+  if (spanishItemsDropped === listsspanish.length && italianItemsDropped === listsitalian.length) {
+    let hiddenItems = document.getElementsByClassName("listhidden");
+    for (let item of hiddenItems) {
+      item.style.display = "flex";   
+    }
+
+    // Change text for h1
+    document.querySelector(".title>h1").innerText = "Oh how cool u are! All items dropped!In the box with initial words u can see the translation in English";
+    
+    //document.getElementById("left").style.width = "100%";
+    /*document.getElementById("left").style.height = "100px";
+    document.getElementById("spanish").style.height = "100px";
+    document.getElementById("italian").style.height = "100px";
+    document.querySelector("h2").innerText = "English";
+    document.body.style.backgroundColor="red";
+    document.body.style.backgroundImage = 'url("../webproject/images_drag_and_drop/confetti4_upscaled.gif")' 
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
+    document.querySelector(".container").style.background = "transparent"; alertShown*/
+    document.querySelector(".maincontainer").style.flexDirection="column";
+    document.querySelector(".maincontainer").style.backgroundColor="rgba(233, 233, 230, 0.607)";
+    document.querySelector(".maincontainer").style.borderRadius="20px";
+    document.querySelector(".maincontainer").style.width="70%";
+
+    document.querySelector(".start h1").innerText = "Good Job! Thanks for playing!";
+    document.querySelector(".start h1").style.paddingBottom = "2em";
+
+    document.getElementById("left").style.border = "none";
+    document.getElementById("spanish").style.border = "none";
+    document.getElementById("italian").style.border = "none";
+    document.querySelector(".title").style.backgroundColor="transparent";
+    document.querySelector(".container").style.backgroundColor="transparent";
+    document.querySelector(".title").style.minHeight = "0px";
+    document.querySelector(".container").style.minHeight = "0px";
+    document.getElementById("left").style.minHeight = "0px";
+    document.querySelector("h2").innerText = "The secret phrase in English sounds:";
+    document.querySelector(".title").style.paddingBottom = "0px";
+    document.querySelector(".title").style.height = "auto";
+    document.querySelector(".container").style.paddingTop = "0px";
+
+
+
+ 
+// Set the fixed order for Spanish items
+document.getElementById("vive").style.order = -4; 
+document.getElementById("cadadia").style.order = -3; 
+document.getElementById("consp").style.order = -2; 
+document.getElementById("pasion").style.order = -1; 
+    // Set the fixed order for Italian items
+    document.getElementById("vivi").style.order = -4; 
+document.getElementById("ognigiorno").style.order = -3; 
+document.getElementById("conit").style.order = -2; 
+document.getElementById("passione").style.order = -1; 
+  }
+
+}
+
+// Set a flag to track whether the alert has been shown
+let alertShown = false;
+
+// Function to show the alert message
+function showAlert() {
+  if (!alertShown) {
+    alert("You can only drop a maximum of 4 items into this box.");
+    alertShown = true; // Set the flag to true
+    setTimeout(() => { alertShown = false; }, 1000); // Reset the flag after 1 second
+  }
+}
+
+// Adding event listeners for Spanish list items
+for (let list of listsspanish) {
+  list.addEventListener("dragstart", function(e) {
+    let selected = e.target;
+
+   
+    leftBox.addEventListener("dragover", function(e) {
+      e.preventDefault();
+    });
+    leftBox.addEventListener("drop", function(e) {
+        leftBox.appendChild(selected);
+        selected.style.background = "#e91e63"; 
+        selected = null;
+        checkCompletion(); // Check completion after dropping
+      
+    });
+
+    spanishBox.addEventListener("dragover", function(e) {
+      e.preventDefault();
+    });
+    
+    spanishBox.addEventListener("drop", function(e) {
+    if (spanishBox.children.length < 4) {
+        spanishBox.appendChild(selected);
+        selected.style.background = "#21C7BF"; 
+        selected = null;
+        checkCompletion(); // Check completion after dropping
+      } else {
+        showAlert();
+      }
+    });
+
+    italianBox.addEventListener("dragover", function(e) {
+      e.preventDefault();
+    });
+    italianBox.addEventListener("drop", function(e) {
+      if (italianBox.children.length < 4) {
+        italianBox.appendChild(selected);
+        selected.style.background = "#e91e63"; 
+        selected = null;
+        checkCompletion(); 
+      } else {
+        showAlert();
+      }// Check completion after dropping
+      
+    });
+  });
+}
+
+// Adding event listeners for Italian list items
+for (let list of listsitalian) {
+  list.addEventListener("dragstart", function(e) {
+    let selected = e.target;
+
+
+
+    leftBox.addEventListener("dragover", function(e) {
+      e.preventDefault();
+    });
+    leftBox.addEventListener("drop", function(e) {
+        leftBox.appendChild(selected);
+        selected.style.background = "#e91e63"; 
+        selected = null;
+        checkItalianCompletion(); // Check completion after dropping
+      
+      
+    });
+
+    spanishBox.addEventListener("dragover", function(e) {
+      e.preventDefault();
+    });
+    spanishBox.addEventListener("drop", function(e) {
+      if (spanishBox.children.length < 4) {
+        spanishBox.appendChild(selected);
+        selected.style.background = "#e91e63"; 
+        selected = null;
+        checkItalianCompletion();
+      } else {
+        showAlert();
+      } // Check completion after dropping
+      
+    });
+
+    italianBox.addEventListener("dragover", function(e) {
+      e.preventDefault();
+    });
+    italianBox.addEventListener("drop", function(e) {
+
+        if (italianBox.children.length < 4) {
+          italianBox.appendChild(selected);
+        selected.style.background = "#21C7BF"; 
+        selected = null;
+        checkCompletion(); // Check completion after dropping
+      } else {
+        showAlert();
+      }
+    });
+      
+    });
+ 
+}
+
+
+  </script>
+
+  
+<!--OPEN CLOSE NAVIGATION -->
+     
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!----><script>
+        
+        $(document).ready(function() {
+    $('.mobile-toggle').click(function() {
+        var isOpen = $(this).hasClass('open');
+
+        if (isOpen) {
+            $(this).removeClass('open');
+          $(this).find('span').text('☰'); //Change text to hamburger icon
+            $('header li, .portfolioheader li').css('transform', 'rotate(-90deg)');
+            $('ul').css('width', ''); // Remove width property
+            $('.right').css('display', 'none');
+            $('ul').css('flex-direction', 'column');
+            $('header a').css('font-size', '1em');
+            $('header a').css('font-weight', '300');
+            $('header a').css('text-transform', 'none');
+            $('nav').css('background-color', 'transparent');
+            if ($(window).width() < 800) {
+        // If screen width is less than 700px, set header link color to green
+        $('header a').css('color', 'transparent');
+    } else {
+        // Otherwise, set header link color to white
+        $('header a').css('color', 'white');
+    }
+            
+
+        } else {
+            $(this).addClass('open');
+            $(this).find('span').text('✕'); //Change text to close icon
+            $('header li, .portfolioheader li').css('transform', 'rotate(0deg)');
+            $('ul').css('width', '100vw');
+            $('.right').css('display', 'block');
+            $('.left').css('display', 'flex');
+            $('.left').css('width', '70%');
+            $('ul').css('flex-direction', 'row');
+            $('header a').css('font-size', '4em');
+            $('header a').css('font-weight', '900');
+            $('header a').css('text-transform', 'lowercase');
+            $('nav').css('background-color', 'black');
+            $('header a').css('color', 'white');
+
+
+
+        
+        }
+    });
+});
+    </script>
+
+
+<!--IMAGES EFFECT ON HOVER IN NAVIGATION -->
+
+<script>
+document.querySelectorAll('.left > li').forEach(function(li, index) {
+    li.addEventListener('mouseover', function() {
+      document.querySelectorAll('.right > img').forEach(function(img, imgIndex) {
+        if (imgIndex === index) {
+          img.style.transform = 'scale(1.5)';
+          img.style.opacity = '1';
+        } else {
+          img.style.opacity = '0';
+        }
+      });
+    });
+  
+    li.addEventListener('mouseout', function() {
+      document.querySelectorAll('.right > img').forEach(function(img) {
+        img.style.transform = 'scale(1)';
+        img.style.opacity = '0';
+      });
+    });
+  });
+</script>  
+
+
+<!--
+    COOL CURSOR
+
+<script>
+var cursor = document.getElementById("cursor");
+document.body.addEventListener("mousemove", function(e) {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+});
+
+document.body.addEventListener("mouseover", function(e) {
+    cursor.style.border = '3px solid red'; // Change border to red
+});-->
+
+
+</script>
+  
+
+
+</main>
+
+
+    </body>
+    </html>
