@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Lobster&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/**{
+  list-style-type: none;
+  text-decoration: none;
+  padding:0;
+  margin: 0;
+  text-decoration: 0;
+  box-sizing: border-box;
+  color:/*#555;white;
+font-family: poppins;
+font-weight: 600;
+  
+}
+
+
+
+
+.mobile-toggle {
+  display: block;
+  cursor: pointer;
+  position: fixed;
+  left: 2em;
+  top: 3.5em;
+  padding-top: 3em;
+  width: 35px;
+-webkit-transition: all 200ms ease-in;
+-moz-transition: all 200ms ease-in;
+transition: all 200ms ease-in;
+-ms-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+ transform: rotate(-90deg);
+ }
+
+.mobile-toggle span {
+    height: 1.5px;
+  margin-bottom: 6px;
+  * #555;*
+  background:// white;
+  display: block;
+  
+}
+
+
+
+.mobile-toggle.active span:nth-child(1),
+.mobile-toggle.active span:nth-child(2),
+.mobile-toggle.active span:nth-child(3) {
+  transform: rotate(90deg);
+
+}*/
+
+ /*Nur in der mobilen Ansicht erscheint der toggle(Hamburger-Icon-Menu). Wenn man anklickt wird das navigation-menu auf/zu geklappt */
+/* .open-nav {
+  max-height: 400px !important;
+  background-color: red;
+}
+.open-nav .mobile-toggle {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+}
+
+
+ 
+mobile-toggle
+Generieren und Positionieren des Hamburger-Icons in der mobilen Ansicht
+
+.mobile-toggle {
+  display: bnone;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  right: 0.5em;
+  top: 1em;
+  width: 30px;
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+}
+
+.mobile-toggle span {
+  width: 30px;
+  height: 4px;
+  margin-bottom: 6px;
+  border-radius: 1000px;
+  background: #ebff00;
+  display: block;
+}
+*/
+
+.mobile-toggle {
+  display: block;
+  cursor: pointer;
+  font-size: 20px;
+  
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+  font-size: 40px;
+  z-index: 1000; /* Ensure the toggle button appears above other content */
+
+}
+
+.mobile-toggle .icon {
+ 
+  width: 30px;
+  height: 4px;
+  margin-bottom: 6px;
+  border-radius: 1000px;
+  color: #ebff00;
+  display: block;
+  transition: background 200ms ease-in;
+}
+
+.mobile-toggle.open .icon {
+  background: transparent; /* Change background to transparent for close icon */
+}
+
+.mobile-toggle.open .icon::before,
+.mobile-toggle.open .icon::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 4px;
+
+  border-radius: 1000px;
+}
+
+.mobile-toggle.open .icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.mobile-toggle.open .icon::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+  
+.portfolioheader{
+  position: absolute;
+    z-index: 21;
+    left: 50%;
+    transform: translateX(-50%);
+    width:100%;
+}
+  
+nav {
+  
+  /*transform: translateY(-50%);*/
+  position: fixed;
+  /*background: #ebff00;*/
+  background-color: rgb(224 224 215 / 38%);
+}
+
+ul{
+display: flex ;
+flex-direction: column;
+align-items:center;
+justify-content: space-evenly;
+
+/**/height:100vh; gap: 3em;
+
+   
+}
+.header li, .portfolioheader li {
+  transform: rotate(-90deg);
+}
+.header a, .portfolioheader a {
+ 
+  display:block;
+  color:#ffffff;
+ 
+}
+
+
+
+.header a:hover, .portfolioheader a:hover {
+ 
+  display:block;
+  color:#ebff00;
+  font-weight: 600;
+ 
+}
+
+
+/*BUTTONS*/
+
+.buttons{
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 3em 5em;
+  gap:2em;
+ margin-bottom: 5em;
+}
+
+button{
+padding:1.5em;
+
+background-color: /*#555*/#ebff00;
+font-weight: 300;
+font-size:1.3em;
+font-weight: 600;
+/*background-color: rgb(224 224 215 / 38%);*/
+border-radius:15px;
+border:0px;
+height: 3.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:200px;
+cursor: pointer;
+  -webkit-transition: all 200ms ease-in;
+-moz-transition: all 200ms ease-in;
+transition: all 200ms ease-in;
+-ms-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+}
+
+button a{
+/*color:#ffffff;*/
+color: #555;
+-webkit-transition: all 200ms ease-in;
+-moz-transition: all 200ms ease-in;
+transition: all 200ms ease-in;
+-ms-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+}
+
+button:hover a{
+  color: #555;
+  }
+  button:hover {
+    background-color: #ffffff;
+    }
+
+    /*RESPONSIVE*/
+
+    @media 
+only screen and (max-width: 500px) {
+  .mobile-toggle {
+    display: block;
+    right: 1em;}
+
+
+}
+
+@media 
+only screen and (max-width: 420px) {
+  .mobile-toggle {
+    right: -1em;}
+}
+
+@media 
+only screen and (max-width: 365px) {
+  .mobile-toggle {
+    right: -1.2em;}
+}
+@media 
+only screen and (max-width: 350px) {
+  .mobile-toggle {
+    right: -1.5em;}
+}
+
+
+@media 
+only screen and (max-width: 300px) {
+
+
+
+
+
+.mobile-toggle {
+  right: -3em;}
+}

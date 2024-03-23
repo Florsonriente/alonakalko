@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello! Wecome to the personal page of Alona Kalko</title>
+
+ 
+    <link rel="stylesheet" href="css/stylenewwebsite_start2.css">
+    <link rel="stylesheet" href="css/style_general.css">
+
+   
+    
+
+</head>
+<!--<header > 
+    <div class = "header">
+        <div class="mobile-toggle">
+            <span class="icon">☰</span>
+          </div>
+<nav>
+    <ul style="width:100vw">
+        <div class="left">
+<li style="transform:rotate(0deg)" > <a href="../webproject/newwebsite.html"> Start </a> </li>
+<li style="transform:rotate(0deg)"> <a href="../webproject/portfolio.html"> Portfolio </a> </li>
+<li style="transform:rotate(0deg)"> <a href="../webproject/about.html"> Me & IT  </a> </li>
+<li style="transform:rotate(0deg)"> <a href="../webproject/newwebsite_quiz.html"> Code for fun  </a> </li>
+<li style="transform:rotate(0deg)"> <a href="mailto:alonakalko89@gmail.com">Contact</a> </li>
+        </div>
+        <div class="right">
+<img src="../webproject/pics/alboron_a_background_in_80s_style_stripes_emerald_blue_and_past_3b741ef2-284f-46fc-9961-d361a0395c6b.png" alt="" style="width:300px">
+<img src="../webproject/pics/amyura_abstract_holographic_of_gradient_yellow_pastel_color_8d53e07c-f4c3-4b27-b710-3eb7bc74b443.png" alt="" style="width:300px">
+<img src="../webproject/pics/bluebutton_yi_soft_holographic_gradient_illustration_minimalist.png" alt="" style="width:300px">
+        </div>
+        </ul>
+
+</nav>
+</div>
+</header > -->
+
+
+<header > 
+    <div class = "header">
+        <div class="mobile-toggle">
+            <span class="icon">☰</span>
+          </div>
+<nav>
+    <ul>
+        <div class="left" style="    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100vh;
+        gap: 3em;">
+<li  > <a href="../webproject/newwebsite.html"> Start </a> </li>
+<li> <a href="../webproject/portfolio.html"> Portfolio </a> </li>
+<li > <a href="../webproject/about.html"> Me & IT  </a> </li>
+<li > <a href="../webproject/newwebsite_quiz.html"> Code for fun  </a> </li>
+<li > <a href="mailto:alonakalko89@gmail.com">Contact</a> </li>
+        </div>
+        <div style="display:none;"class ="right">
+<img src="../webproject/pics/oldmanlaufeyson_clouds_of_data_fine_art_photography_fashion_mag_d06afed8-0d04-4b12-af34-40ca5b291693.png" alt="" style="width:300px"style="display:none!important">
+<img src="../webproject/pics/amyura_abstract_holographic_of_gradient_yellow_pastel_color_8d53e07c-f4c3-4b27-b710-3eb7bc74b443.png" alt="" style="width:300px">
+<img src="../webproject/pics/bluebutton_yi_soft_holographic_gradient_illustration_minimalist.png" alt="" style="width:300px">
+<img src="../webproject/pics/beyondtomorrowstudios_76190_A_black_rectangular_box_above_a_doo_ef9757af-2723-4be1-932d-9e5eccf38c06.png" alt="" style="width:300px">
+<img src="../webproject/pics/georgieoboy_Realistic_3d_holographic_liquid_texture_-_iridescen_f14bfd2d-e796-4e50-abf1-6e8b414accf3.png" alt="" style="width:300px">
+        </div>
+        </ul>
+
+</nav>
+</div>
+</header>
+
+<div class="main">
+  
+    <div class='cursor' id="cursor"></div>
+ 
+
+<!--<div class="start">  <h1>Hello! Want to get to know me? Just make a click</h1></div>-->
+<section class="hero-wrapper">
+    <!-- Left Side -->
+    <article id="left-side" class="hero-side">
+      <h1 class="title">
+        I'm a <span data-value="FRONTEND" id="frontend" class="cool">FRONTEND</span> developer
+      </h1>
+    <!--  <a href="/" class="name" id="first-name" aria-label="First Name: Noob">noob</a>-->
+    </article>
+    <!-- Right Side -->
+    <article id="right-side" class="hero-side">
+      <h1 class="title">
+        I'm a <span data-value="BACKEND" id="backend" class="cool">CREATIVE</span> nerd
+      </h1>
+    <!--  <a href="/" class="name" id="last-name" aria-label="Last Name: Coder">Coder</a>-->
+    </article>
+  </section>
+</main>
+    
+
+
+
+  
+</div>  
+
+
+
+
+    </body>
+
+<!--OPEN CLOSE NAVIGATION -->
+     
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!----><script>
+        
+        $(document).ready(function() {
+    $('.mobile-toggle').click(function() {
+        var isOpen = $(this).hasClass('open');
+
+        if (isOpen) {
+            $(this).removeClass('open');
+          $(this).find('span').text('☰'); //Change text to hamburger icon
+            $('header li, .portfolioheader li').css('transform', 'rotate(-90deg)');
+            $('ul').css('width', ''); // Remove width property
+            $('.right').css('display', 'none');
+            $('ul').css('flex-direction', 'column');
+            $('header a').css('font-size', '1em');
+            $('header a').css('font-weight', '300');
+            $('header a').css('text-transform', 'none');
+            $('nav').css('background-color', 'black');
+            if ($(window).width() < 800) {
+        // If screen width is less than 700px, set header link color to green
+        $('header a').css('color', 'transparent');
+    } else {
+        // Otherwise, set header link color to white
+        $('header a').css('color', 'white');
+    }
+            
+        } else {
+            $(this).addClass('open');
+            $(this).find('span').text('✕'); //Change text to close icon
+            $('header li, .portfolioheader li').css('transform', 'rotate(0deg)');
+            $('ul').css('width', '100vw');
+            $('.right').css('display', 'block');
+            $('.left').css('display', 'flex');
+            $('.left').css('width', '70%');
+            $('ul').css('flex-direction', 'row');
+            $('header a').css('font-size', '4em');
+            $('header a').css('font-weight', '900');
+            $('header a').css('text-transform', 'lowercase');
+            $('nav').css('background-color', 'black');
+            $('header a').css('color', 'white');
+
+
+
+        
+        }
+    });
+});
+    </script>
+
+
+<!--IMAGES EFFECT ON HOVER IN NAVIGATION -->
+
+<script>
+document.querySelectorAll('.left > li').forEach(function(li, index) {
+    li.addEventListener('mouseover', function() {
+      document.querySelectorAll('.right > img').forEach(function(img, imgIndex) {
+        if (imgIndex === index) {
+          img.style.transform = 'scale(1.5)';
+          img.style.opacity = '1';
+        } else {
+          img.style.opacity = '0';
+        }
+      });
+    });
+  
+    li.addEventListener('mouseout', function() {
+      document.querySelectorAll('.right > img').forEach(function(img) {
+        img.style.transform = 'scale(1)';
+        img.style.opacity = '0';
+      });
+    });
+  });
+</script>  
+
+
+<!--
+    COOL CURSOR
+-->
+<script>
+var cursor = document.getElementById("cursor");
+document.body.addEventListener("mousemove", function(e) {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+});
+
+document.body.addEventListener("mouseover", function(e) {
+    cursor.style.border = '3px solid red'; // Change border to red
+});
+
+
+</script>
+
+
+
+<script>
+    // Access the left-side element
+const leftSideElement = document.getElementById("left-side");
+const mobileToggle = document.querySelector("body > header > div > div > span");
+
+// Handles mouse and touch movement to adjust the width of the left-side element
+const handleMovement = (event) => {
+  const clientX = event.touches ? event.touches[0].clientX : event.clientX;
+  const newWidthPercentage = (clientX / window.innerWidth) * 100;
+  leftSideElement.style.width = `${newWidthPercentage}%`;
+  mobileToggle.style.color = 'red';
+
+
+};
+
+// Attach movement handlers for both mouse and touch events
+document.addEventListener("mousemove", handleMovement);
+document.addEventListener("touchmove", (event) => handleMovement(event));
+
+// Function to animate text change on mousemove over the backend element
+/*const animateTextChange = (event) => {
+  const targetElement = event.target;
+  let iterations = 0;
+  const interval = setInterval(() => {
+    targetElement.innerText = targetElement.innerText
+      .split("")
+      .map((char, index) =>
+        index < iterations ? targetElement.dataset.value[index] : randomSign()
+      )
+      .join("");
+    if (iterations >= targetElement.dataset.value.length)
+      clearInterval(interval);
+    iterations++;
+  }, 30);
+};*/
+
+// Generate a random sign from the alphabet
+/*const randomSign = () =>
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[Math.floor(Math.random() * 26)];*/
+
+// Enhance text by wrapping each letter in a span with class 'letter'
+
+const enhanceTextWithSpans = (id) => {
+  const element = document.getElementById(id);
+  const letters = element.innerText.split("");
+  element.innerText = "";
+  letters.forEach((letter) => {
+    const span = document.createElement("span");
+    span.className = "letter";
+    span.innerText = letter;
+    element.appendChild(span);
+  });
+};
+
+// Initialize text enhancement and attach text animation handler
+document
+  .getElementById("backend");
+ // .addEventListener("mousemove", animateTextChange);
+ enhanceTextWithSpans("frontend");
+
+</script>
+    </html>

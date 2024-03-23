@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Lobster&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/**{
+  list-style-type: none;
+  text-decoration: none;
+  padding:0;
+  margin: 0;
+  text-decoration: 0;
+  box-sizing: border-box;
+  color:/*#555;white;
+font-family: poppins;
+font-weight: 600;
+  
+}*/
+*{ cursor: inherit !important;}
+
+.start h1{
+  padding-bottom: 2em;
+}
+
+/*.scrolledpage{
+  width:100vw;
+}*/
+
+
+.scroll-watcher{
+height:80px;
+position:fixed;
+top:0;
+z-index:1000000;
+background-color: lime;
+width:100%;
+scale: 0 0;
+transform-origin: left;
+
+animation: watcher linear;
+animation-timeline:scroll(inline);
+
+}
+
+
+@keyframes watcher {
+  to{scale:1 1;}
+}
+
+
+
+.scroller{
+width:max-content;
+flex-wrap:nowrap;
+overflow:hidden;
+
+animation: .5s slideleft linear ;
+animation-timeline:scroll(root)/*view()*/; 
+
+}
+
+.block {
+
+
+  
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-content: center;
+  align-items: flex-end;
+}
+
+
+.scroller2{
+  width:max-content;
+  flex-wrap:nowrap;
+  overflow:hidden;
+  
+  animation: .5s slideleft linear ;
+  animation-timeline:view()/*scroll(root)*/; 
+  animation-range: entry;
+  animation-direction: reverse;
+  }
+
+
+
+@keyframes slideleft {
+ 
+  
+  /*  to {
+      transform: translate(calc(-50%));
+    }*/
+
+    0% {transform: translate(0%);}
+    100% {transform: translate(50%);}
+
+  }
+
+.images{
+  /*display: flex;
+  flex-direction: column;*/
+  display: block;
+  margin: auto;
+}
+
+.images >img {
+  scale: .8;
+  opacity:0;
+
+  animation: fade-in linear forwards;
+  animation-timeline:view();
+  animation-range:entry;
+  width:900px;
+}
+
+@keyframes fade-in {
+  to {scale:1.3; opacity:1;}
+}
+

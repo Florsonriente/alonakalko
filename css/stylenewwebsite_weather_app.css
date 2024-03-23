@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Lobster&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+*{
+  list-style-type: none;
+  text-decoration: none;
+  padding:0;
+  margin: 0;
+  text-decoration: 0;
+  box-sizing: border-box;
+  font-family: 'poppins';
+
+ 
+}
+
+body {
+
+position:relative;
+width:100%;
+min-height:100vh;
+background-image: url(../images_weather_app/3dclouds.png);
+/*background-image: url(../pics/cloud_pink.png);*/
+background-size: cover;
+background-repeat: no-repeat;
+background-position: top center;
+
+}
+
+main{
+   background-image: url(../images_weather_app/clouds3.gif);  
+
+}
+
+.start h1{
+  
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-top: 3em;
+    
+    font-weight: 600;
+    color:yellow;
+    text-align: center;
+    
+  
+}
+
+.maincontainer {
+  display: flex;
+  
+    flex-direction: row;
+    justify-content: center;
+   /* align-items: flex-start;*/
+    padding:3em 5em;
+
+    gap:2em;
+}
+
+
+
+.title{
+  display: none;
+  color:#555/*white;*/;
+  width:90%;
+  max-width:470px;
+  background-color: rgba(233, 233, 230, 0.607);
+  border-radius:20px;
+}
+.title h1{
+  text-align: center;
+  /*font-size:2em;*/
+  margin:0px auto 100px;
+  color:#555/*white;*/;
+  font-weight: 400;
+  
+ 
+  padding: 2em;
+  text-align: center;
+  font-size:1.3em;
+
+}
+.card { 
+  color:#555/*white;*/;
+  width:90%;
+  max-width:470px;
+ /*background: linear-gradient(#ffedbc, #ed4264);*/
+ background-color: rgba(233, 233, 230, 0.607);
+ color:#555/*white;*/;
+ 
+  border-radius:20px;
+  padding:2em;
+  text-align: center;
+/*background-image: url(../images_weather_app/app_bckgr3.png);
+background-repeat: no-repeat;
+background-position: center center ;
+background-size: contain;*/
+
+ }
+ 
+
+
+.search{
+width:100%;
+display:flex;
+align-items: center;
+justify-content: space-between;
+margin-top:10%;
+
+}
+
+
+.search input{
+  border:0;
+  outline: 0;
+
+  color:#555/*white;*/;
+  padding:0px;
+  height:60px;
+  background: transparent;
+  margin-right: 16px;
+  font-size:2em;
+  flex:1;
+  border-bottom: 4px solid rgb(255, 255, 255);
+  /*background-image: url(../images_weather_app/search_input_2.png);
+  background-position: bottom;border-radius:30px;*/
+width:100%;
+}
+
+
+.search button{
+  border:0;
+  outline: 0;
+  background: transparent;
+  border-radius: 50%;
+  width:60px;
+  height:60px;
+  cursor: pointer;
+}
+
+.search button:hover{
+  background-color: #ffffff00;
+}
+
+.search button img{
+  width:36px;
+  display: block;
+/*margin: auto;*/
+
+
+}
+
+.weather-icon{
+  width:150px;
+  margin-top:30px;
+}
+
+.weather h1 {
+  font-size:80px;
+  font-weight:500;
+}
+
+.weather h2 {
+  font-size:45px;
+  font-weight:400;
+  margin-top:-10px;
+}
+
+.details{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  padding:0 20px;
+  margin-top:50px;
+  margin-bottom: 100px;
+}
+
+.col {
+  display:flex;
+  align-items:center;
+  text-align:left;
+}
+
+.col img{
+  width:40px;
+  margin-right:10px;
+  /*filter:invert(1);*/
+}
+
+.humidity, .wind {
+  font-size: 28px;
+  margin-top:-6px ;
+}
+
+
+.weatherappwithman{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+
+}
+/*.willwearclothes{}
+  background: url("../images_walking_man/istockphoto-1125710669-612x612.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+ width:86px/*112px86.428px
+height:350px;
+
+animation: walk 1.2s infinite steps(7);
+}
+
+
+
+@keyframes walk {
+  0%{background-position: 0px;}
+  100%{background-position: -612px;}/*564*/
+
+  @media only screen and (max-width: 800px) {
+    .maincontainer{
+      padding:1em;
+    }
+
+    .weather h1,  .weather h2
+     {
+      font-size: 40px;
+  }
+
+  .search input{
+     font-size: 1.5em;
+   
+  }
+
+    }
+    
+    @media only screen and (max-width: 410px) {
+     
+      .weather h1,  .weather h2 {
+        font-size: 30px;
+    }
+  
+    .search input{
+       font-size: 1em;
+       margin-right:0px;
+   
+    }
+    .start h1{
+      font-size:1.5em;
+    }
+
+    .wind, .humidity {
+      font-size:1.2em;
+    }
+
+    .search button img {
+      width: 20px;
+    }}
+
+
+    @media only screen and (max-width: 330px) {
+
+    }
